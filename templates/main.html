@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="static/css/main.css">+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Autour+One&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" rel="stylesheet">
+    <title>Main</title>
+
+</head>
+<body class="bg-stone-200">
+
+<div class="min-h-screen flex items-center justify-center">
+    <div class="bg-white p-8 w-3/5 rounded-xl flex items-start space-x-8">
+        <div class="w-1/2">
+            <img src="{{ url_for('static', filename='AudioHubIcon.png') }}" alt="Opis zdjęcia" class="float-left">
+        </div>
+        <div class="w-1/2">
+            <h1 class="text-indigo-700 text-8xl w-5/5 mt-12">Audio Hub</h1>
+            <p class="w-5/5 mr-12 text-right m-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed enim sem, ullamcorper sit amet nulla ac, placerat mollis purus. Sed tempor maximus lorem eget elementum. Nullam malesuada orci et elementum porttitor. Integer eu est ac augue venenatis lobortis ut placerat purus.</p>
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onclick="wywolajApp()">
+        <i class="fas fa-door-open"></i> Go in
+    </button>
+
+        </div>
+    </div>
+</div>
+    <script>
+        function wywolajApp() {
+            fetch('/app')  // Wysłanie zapytania do trasy /app
+                .then(response => response.text())
+                .then(data => {
+                    // Przekieruj na nową stronę, jeśli to jest to, co chcesz zrobić
+                    window.location.href = '/app';
+                })
+                .catch(error => {
+                    console.error('Wystąpił błąd:', error);
+                });
+        }
+    </script>
+</body>
+</html>

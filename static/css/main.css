@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Autour+One&display=swap');
+
+h1 {
+  font-family: 'Leckerli One', cursive;
+}
+
+* {
+  font-family: 'Autour One', cursive;
+}
+
+.bg-custom {
+}
+
